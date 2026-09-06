@@ -23,6 +23,7 @@
   --activity-2: url("assets/kegiatan-2.jpeg");
   --activity-3: url("assets/kegiatan-3.jpeg");
   --activity-4: url("assets/kegiatan-4.jpeg");
+  --activity-5: url("assets/kegiatan-5.jpeg");
 }
 
 * { box-sizing: border-box; }
@@ -137,6 +138,7 @@ h1 em, h2 em, blockquote em { color: var(--accent); font-style: italic; font-wei
 .image-two { background-image:linear-gradient(rgba(20,35,28,.12),rgba(20,35,28,.12)), var(--activity-2); }
 .image-three { background-image:linear-gradient(rgba(20,35,28,.12),rgba(20,35,28,.12)), var(--activity-3); }
 .image-four { background-image:linear-gradient(rgba(20,35,28,.12),rgba(20,35,28,.12)), var(--activity-4); }
+.image-five { background-image:linear-gradient(rgba(20,35,28,.12),rgba(20,35,28,.12)), var(--activity-5); }
 .activity-body { padding:25px; }
 .activity-body > div { display:flex; justify-content:space-between; gap:15px; }
 .tag { color:var(--accent-dark); font-size:9px; font-weight:700; letter-spacing:.14em; }
