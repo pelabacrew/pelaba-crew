@@ -1,18 +1,11 @@
 #!/bin/bash
 
-# ==========================================
-# KARANG TARUNA - WEBSITE UPDATE
-# ==========================================
-
-set -e
-
 REPO_URL="https://github.com/pelabacrew/pelaba-crew.git"
 WEBSITE_URL="https://pelabacrew.github.io/pelaba-crew/"
 
 echo ""
-echo "=========================================="
-echo "   🚀 KARANG TARUNA WEBSITE UPDATER"
-echo "=========================================="
+echo "🚀 KARANG TARUNA WEBSITE UPDATER"
+echo "========================================"
 echo ""
 
 # Cek Git repository
@@ -31,63 +24,60 @@ if [ "$REMOTE" != "$REPO_URL" ]; then
     echo "Repository sekarang:"
     echo "$REMOTE"
     echo ""
-    echo "Seharusnya:"
+    echo "Repository yang seharusnya:"
     echo "$REPO_URL"
+    echo ""
     exit 1
 fi
 
-# Ambil branch
-BRANCH=$(git branch --show-current)
-
-echo "📁 Project : Karang Taruna"
-echo "🌿 Branch  : $BRANCH"
-echo "🔗 GitHub  : $REMOTE"
+echo "📁 Repository : $REMOTE"
+echo "🌐 Website    : $WEBSITE_URL"
 echo ""
 
 # Cek perubahan
 if [ -z "$(git status --porcelain)" ]; then
-    echo "ℹ️  Tidak ada perubahan."
-    echo ""
+    echo "✅ Tidak ada perubahan."
     echo "Website sudah dalam kondisi terbaru."
     echo ""
     exit 0
 fi
 
-# Tampilkan perubahan
-echo "📋 File yang berubah:"
-echo ""
-
+echo "📝 Perubahan ditemukan:"
 git status --short
-
 echo ""
-echo "------------------------------------------"
 
 # Tambahkan semua perubahan
-echo "📦 Menyiapkan file..."
 git add .
 
-# Commit message
-if [ -n "$1" ]; then
-    COMMIT_MESSAGE="$1"
-else
-    COMMIT_MESSAGE="Update website Karang Taruna"
-fi
+# Commit
+COMMIT_MESSAGE="Update website $(date '+%Y-%m-%d %H:%M:%S')"
 
-echo "💾 Commit: $COMMIT_MESSAGE"
 git commit -m "$COMMIT_MESSAGE"
 
+if [ $? -ne 0 ]; then
+    echo ""
+    echo "❌ Commit gagal."
+    exit 1
+fi
+
+# Push
 echo ""
-echo "☁️  Mengirim ke GitHub..."
-git push
+echo "☁️ Mengirim perubahan ke GitHub..."
+echo ""
+
+git push origin main
+
+if [ $? -ne 0 ]; then
+    echo ""
+    echo "❌ Push ke GitHub gagal."
+    exit 1
+fi
 
 echo ""
-echo "=========================================="
-echo "   ✅ UPDATE BERHASIL!"
-echo "=========================================="
+echo "========================================"
+echo "🎉 UPDATE BERHASIL!"
+echo "========================================"
 echo ""
 echo "🌐 Website:"
 echo "$WEBSITE_URL"
-echo ""
-echo "💡 Jika perubahan belum terlihat,"
-echo "   tekan Ctrl + Shift + R di browser."
 echo ""
