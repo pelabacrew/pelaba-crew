@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard Admin — Pelaba Crew</title>
+
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+  <main class="dashboard-page">
+
+    <div class="dashboard-card">
+
+      <div class="dashboard-header">
+        <div>
+          <p class="dashboard-label">PELABA CREW</p>
+          <h1>Dashboard Admin</h1>
+        </div>
+
+        <button id="logoutButton" type="button">
+          Logout
+        </button>
+      </div>
+
+      <div class="dashboard-content">
+
+        <h2>Selamat datang 👋</h2>
+
+        <p>
+          Kamu berhasil masuk ke panel admin Pelaba Crew.
+        </p>
+
+        <div class="dashboard-info">
+          <strong>Status</strong>
+          <span id="userEmail">Memuat...</span>
+        </div>
+
+        <p class="coming-soon">
+          🚧 Fitur CRUD kegiatan akan kita bangun di tahap berikutnya.
+        </p>
+
+      </div>
+
+      <a href="../index.html" class="back-link">
+        ← Lihat website
+      </a>
+
+    </div>
+
+  </main>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Config & Dashboard -->
+  <script src="js/config.js"></script>
+  <script src="js/dashboard.js"></script>
+
+</body>
+</html>
