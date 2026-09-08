@@ -9,7 +9,7 @@
   --muted: #66736c;
   --paper: #f7f7f3;
   --white: #ffffff;
-  --accent:#c49a3a;;
+  --accent: #c49a3a;
   --accent-dark: #9b7a3d;
   --line: rgba(21,34,28,.13);
   --dark: #132019;
@@ -18,13 +18,13 @@
   --radius: 4px;
 
   /* BACKGROUND IMAGE — GANTI URL INI */
-  --hero-bg: url("assets/foto-kumpulan.jpeg");
-  --activity-1: url("assets/kegiatan-1.jpeg");
-  --activity-2: url("assets/kegiatan-2.jpeg");
-  --activity-3: url("assets/kegiatan-3.jpeg");
-  --activity-4: url("assets/kegiatan-4.jpeg");
-  --activity-5: url("assets/kegiatan-5.jpeg");
-  --activity-6: url("assets/kegiatan-6.jpeg");
+  --hero-bg: url("../assets/foto-kumpulan.jpeg");
+  --activity-1: url("../assets/kegiatan-1.jpeg");
+  --activity-2: url("../assets/kegiatan-2.jpeg");
+  --activity-3: url("../assets/kegiatan-3.jpeg");
+  --activity-4: url("../assets/kegiatan-4.jpeg");
+  --activity-5: url("../assets/kegiatan-5.jpeg");
+  --activity-6: url("../assets/kegiatan-6.jpeg");
 }
 
 * { box-sizing: border-box; }
@@ -242,7 +242,7 @@ footer { background:#0e1712; color:rgba(255,255,255,.5); padding:25px 0; }
   justify-content: center;
   align-items: center;
   gap: 220px;
-  margin-top: 46 px;
+  margin-top: 46px;
 }
 
 .social-icon {

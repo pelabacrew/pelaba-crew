@@ -1,3 +1,26 @@
+# Pelaba Crew — Website
+
+Website publik Pelaba Crew berbasis HTML, CSS, dan JavaScript.
+
+## Struktur proyek
+
+- `index.html` — halaman utama
+- `css/style.css` — stylesheet utama
+- `js/main.js` — interaksi frontend
+- `assets/` — logo dan foto kegiatan
+- `admin/` — disiapkan untuk dashboard admin (Phase 2)
+- `pages/` — disiapkan untuk halaman tambahan
+
+## Roadmap
+
+1. Phase 1 — fondasi frontend
+2. Phase 2 — admin login & dashboard
+3. Phase 3 — API/backend
+4. Phase 4 — database
+5. Phase 5 — CRUD & upload foto
+
+---
+
 # Website Karang Taruna Desa — Modern & Elegan
 
 ## Struktur
